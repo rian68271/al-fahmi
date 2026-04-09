@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 43% 98%;
+    --foreground: 224 33% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 33% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 33% 15%;
+
+    --primary: 240 100% 25%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 30% 96%;
+    --secondary-foreground: 224 33% 15%;
+
+    --muted: 220 30% 96%;
+    --muted-foreground: 220 12% 42%;
+
+    --accent: 235 100% 97%;
+    --accent-foreground: 240 100% 25%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 26% 90%;
+    --input: 220 26% 90%;
+    --ring: 240 100% 25%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 223 39% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 223 39% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 240 100% 25%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 223 28% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 223 28% 17%;
+    --muted-foreground: 216 15% 70%;
+
+    --accent: 223 35% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 42%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 223 22% 21%;
+    --input: 223 22% 21%;
+    --ring: 240 100% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(0, 0, 128, 0.12), transparent 28%), radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 24%), linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 247, 251, 0.98));
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply transition-all duration-200;
+  }
+
+  select {
+    @apply flex h-11 w-full rounded-2xl border border-input bg-white/90 px-4 py-2 text-sm shadow-sm outline-none ring-offset-background focus:border-primary/40 focus:ring-4 focus:ring-primary/10;
+  }
+
+  textarea {
+    @apply min-h-[120px] w-full rounded-2xl border border-input bg-white/90 px-4 py-3 text-sm shadow-sm outline-none ring-offset-background placeholder:text-muted-foreground focus:border-primary/40 focus:ring-4 focus:ring-primary/10;
+  }
+}
+
+@layer utilities {
+  .surface {
+    @apply rounded-3xl border border-white/60 bg-white/80 shadow-[0_8px_24px_-24px_rgba(15,23,42,0.18)] backdrop-blur-xl;
+  }
+
+  .surface-subtle {
+    @apply rounded-2xl border border-border/80 bg-white/70 shadow-[0_6px_18px_-20px_rgba(15,23,42,0.16)] backdrop-blur;
+  }
+
+  .page-header {
+    @apply flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between;
+  }
+
+  .page-title {
+    @apply text-3xl font-semibold tracking-tight text-slate-900;
+  }
+
+  .page-description {
+    @apply max-w-2xl text-sm leading-6 text-muted-foreground;
+  }
+}

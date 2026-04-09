@@ -1,0 +1,3 @@
+nis,namalengkap,kelas,jurusan,status,ayah,ibu,wali,hubungan,teleponortu,pekerjaanortu,alamat,telepon,riwayatakademik,catatan
+2026002,Siti Rahma,7B,Tahfidz,aktif,Bapak Rahman,Ibu Salma,,Orang Tua,081234560001,Karyawan,"Jl. Kenanga No. 5, Jakarta",081355500011,"Semester 1 - Rata-rata 90; Juara 2 Tahfidz kelas","Contoh data untuk import"
+2026003,Muhammad Nabil,8A,Tahsin,aktif,Bapak Naufal,Ibu Nabila,,Orang Tua,081234560002,Wiraswasta,"Jl. Mawar No. 8, Jakarta",081355500022,"Semester 1 - Rata-rata 87; Tahsin jilid 5","Pastikan header kolom tidak diubah"
